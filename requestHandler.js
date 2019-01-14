@@ -1,12 +1,19 @@
-function start(){
-  console.log('request handler start was called');
-  return 'Hello Start';
+var exec = require('child_process').exec;
 
+function start(response){
+  console.log('request handler start was called');
+  exec('find /', {timeout: 100000, maxBuffer: 20000*1024}, function(error, stdout, stderr){
+    response.writeHead(200, {'Content-Type': 'text/plain' });
+    response.write(stdout);
+    response.end();
+  });
 }
 
-function upload(){
+function upload(response){
   console.log('request handler upload was called');
-  return 'Hello Upload';
+  response.writeHead(200, {'Content-Type': 'text/plain' });
+  response.write('Hello Upload');
+  response.end();
 }
 
 
