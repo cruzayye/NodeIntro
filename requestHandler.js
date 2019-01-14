@@ -1,10 +1,10 @@
 function start(){
-  console.log('request Hanlder start was called');
+  console.log('request handler start was called');
 
 }
 
 function upload(){
-  console.log('request hanlder upload was called');
+  console.log('request handler upload was called');
 }
 
 
