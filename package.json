@@ -1,0 +1,21 @@
+{
+  "name": "NodeIntro",
+  "version": "1.0.0",
+  "description": "code along with \"The Node Beginner Book\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruzayye/NodeIntro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cruzayye/NodeIntro/issues"
+  },
+  "homepage": "https://github.com/cruzayye/NodeIntro#readme"
+}
