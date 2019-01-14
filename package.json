@@ -4,8 +4,10 @@
   "description": "code along with \"The Node Beginner Book\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "start": "node server.js",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/cruzayye/NodeIntro/issues"
   },
-  "homepage": "https://github.com/cruzayye/NodeIntro#readme"
+  "homepage": "https://github.com/cruzayye/NodeIntro#readme",
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "jest": "^23.6.0"
+  }
 }

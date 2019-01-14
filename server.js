@@ -1,4 +1,5 @@
 var http = require('http');
+var url = require('url');
 
 // http.createServer((request, response) => {
 //   console.log('wating');
@@ -11,9 +12,13 @@ var http = require('http');
 // or 
 
 
-function start() {
+function start(route) {
   function onRequest(request, response) {
-    console.log('request received')
+    var pathName = 
+    url.parse(request.url).pathName;
+    console.log(`Request for ${pathName} received.`);
+    route(pathName);
+
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.write('Hello World');
     response.end();
@@ -23,6 +28,8 @@ function start() {
   console.log('server has started');
 
 }
+
+
 
 exports.start = start;
 
